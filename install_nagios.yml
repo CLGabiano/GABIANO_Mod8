@@ -4,13 +4,6 @@
   become: true
   pre_tasks:
 
-    - name: dnf and epel installation
-      yum:
-        name: 
-          - epel-release
-          - dnf
-      when: ansible_distribution == "CentOS"
-
     - name: dpkg in ubuntu
       shell: |
         dpkg --configure -a
